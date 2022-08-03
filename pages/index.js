@@ -6,9 +6,9 @@ import { useState, useEffect } from "react";
 import DrawerNav from "./components/DrawerNav";
 import Main from "./components/Main";
 
-export default function Home() {
-  const [characters, setCharacters] = useState([]);
-  // Not getting image links? Links are valid on browser
+export default function Home({ characters }) {
+  console.log(characters);
+
   return (
     <div>
       <header>
@@ -16,21 +16,16 @@ export default function Home() {
       </header>
       <h2>Biscuits hops on commentary</h2>
       <Main characters={characters} />
-      {characters.map((character) => (
-        <>
-          <img src={character.splash} />
-        </>
-      ))}
     </div>
   );
 }
 
-// export const getStaticProps = async () => {
-//   const { data: characters } = await supabase.from("characters").select("*");
+export const getStaticProps = async () => {
+  const { data: characters } = await supabase.from("characters").select("*");
 
-//   return {
-//     props: {
-//       characters,
-//     },
-//   };
-// };
+  return {
+    props: {
+      characters,
+    },
+  };
+};

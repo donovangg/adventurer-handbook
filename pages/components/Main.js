@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Flex, Spacer, Box, Text } from "@chakra-ui/react";
+import { Flex, Spacer, Box, Text, Image } from "@chakra-ui/react";
 
 export default function Main({ characters }) {
   console.log(characters);
@@ -10,15 +10,24 @@ export default function Main({ characters }) {
         <Box w="400px" boxShadow="base">
           <Text fontSize="3xl">Hi Aventurer</Text>
         </Box>
-        <Box w="400px" boxShadow="base">
-          <Text>yeet</Text>
+        <Flex
+          w="400px"
+          boxShadow="base"
+          flexWrap="wrap"
+          backgroundColor="gray.400"
+        >
           {characters.map((character) => (
             <div>
               <h2>{character.name}</h2>
-              <img src={character.icon} />
+              <Image
+                boxSize="100px"
+                borderRadius="full"
+                src={character.icon}
+                alt={character.name}
+              />
             </div>
           ))}
-        </Box>
+        </Flex>
       </Flex>
     </div>
   );
