@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Flex, Spacer, Box, Text, Image } from "@chakra-ui/react";
 
 export default function Main({ characters }) {
+  let today = "Tuesday";
+  const tuesday = characters.farmable_days;
   console.log(characters);
   return (
     <div>
@@ -25,6 +27,12 @@ export default function Main({ characters }) {
                 src={character.icon}
                 alt={character.name}
               />
+              <p>
+                {/*farmable days is an array */}
+                {character.farmable_days.map((day) => (
+                  <p>{day}</p>
+                ))}
+              </p>
             </div>
           ))}
         </Flex>
