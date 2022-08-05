@@ -17,7 +17,7 @@ export default function DrawerNav() {
   const btnRef = React.useRef();
   return (
     <>
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
+      <Button ref={btnRef} colorScheme="purple" onClick={onOpen}>
         Open
       </Button>
       <Drawer
