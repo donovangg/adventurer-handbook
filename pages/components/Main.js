@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Flex, Spacer, Box, Text, Image } from "@chakra-ui/react";
 import { format, compareAsc } from "date-fns";
+import CharacterImage from "./CharacterImage";
 
 export default function Main({ characters }) {
   console.log(characters);
@@ -20,15 +21,19 @@ export default function Main({ characters }) {
           <h2>Farmable today</h2>
           <Flex flexWrap="wrap">
             {characters.map((character) => (
-              <div>
+              <div key={character.id}>
                 {/* map over array that includes todays date */}
                 {character.farmable_days.includes(today) ? (
                   <Flex flexDir="column">
-                    <p>{character.name}</p>
+                    {/* <p>{character.name}</p>
                     <Image
                       borderRadius="full"
                       width="64px"
                       src={character.icon}
+                    /> */}
+                    <CharacterImage
+                      icon={character.icon}
+                      name={character.name}
                     />
                   </Flex>
                 ) : (
