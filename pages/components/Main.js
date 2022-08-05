@@ -14,11 +14,39 @@ export default function Main({ characters }) {
   return (
     <Flex>
       <Sidebar />
-      <Flex flex="1" gap="12" justifyContent="center" backgroundColor="red.300">
-        <Box w="400px" maxH="400px" boxShadow="base" backgroundColor="white">
-          <Text fontSize="3xl">Hi Aventurer</Text>
+      <Flex
+        flex="1"
+        flexWrap="wrap"
+        gap="12"
+        justifyContent="center"
+        backgroundColor="white"
+        paddingTop="10"
+      >
+        <Box
+          w="600px"
+          maxH="300px"
+          boxShadow="2xl"
+          rounded="md"
+          backgroundColor="white"
+        >
+          <Text fontSize="3xl">Hi Adventurer</Text>
         </Box>
-        <Box w="400px" maxH="400px" backgroundColor="gray.400" boxShadow="base">
+        <Box
+          w="600px"
+          maxH="300px"
+          boxShadow="2xl"
+          rounded="md"
+          backgroundColor="white"
+        >
+          <Text fontSize="3xl">Events Box</Text>
+        </Box>
+        <Box
+          w="400px"
+          maxH="300px"
+          boxShadow="2xl"
+          rounded="md"
+          backgroundColor="gray.400"
+        >
           <h2>Farmable today</h2>
           <Flex flexWrap="wrap">
             {characters.map((character) => (
@@ -43,6 +71,15 @@ export default function Main({ characters }) {
               </div>
             ))}
           </Flex>
+        </Box>
+        <Box
+          w="400px"
+          maxH="300px"
+          boxShadow="2xl"
+          rounded="md"
+          backgroundColor="white"
+        >
+          <Text fontSize="3xl">Farmable Weapons</Text>
         </Box>
       </Flex>
     </Flex>
