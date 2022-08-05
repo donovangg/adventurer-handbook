@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Flex, Spacer, Box, Text, Image } from "@chakra-ui/react";
 import { format, compareAsc } from "date-fns";
 import CharacterImage from "./CharacterImage";
+import Sidebar from "./Sidebar";
 
 export default function Main({ characters }) {
   console.log(characters);
@@ -11,13 +12,13 @@ export default function Main({ characters }) {
   console.log(today);
 
   return (
-    <div>
-      <h2>Biscuits hops on</h2>
-      <Flex>
-        <Box w="400px" boxShadow="base">
+    <Flex>
+      <Sidebar />
+      <Flex flex="1" gap="12" justifyContent="center" backgroundColor="red.300">
+        <Box w="400px" maxH="400px" boxShadow="base" backgroundColor="white">
           <Text fontSize="3xl">Hi Aventurer</Text>
         </Box>
-        <Box w="400px" backgroundColor="gray.400" boxShadow="base">
+        <Box w="400px" maxH="400px" backgroundColor="gray.400" boxShadow="base">
           <h2>Farmable today</h2>
           <Flex flexWrap="wrap">
             {characters.map((character) => (
@@ -44,6 +45,6 @@ export default function Main({ characters }) {
           </Flex>
         </Box>
       </Flex>
-    </div>
+    </Flex>
   );
 }
