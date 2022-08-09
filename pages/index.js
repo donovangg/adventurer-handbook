@@ -1,28 +1,25 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import { supabase } from "../utils/supabase";
 import { useState, useEffect } from "react";
 import Main from "./components/Main";
 import Header from "./components/Header";
 
-export default function Home({ characters }) {
-  console.log(characters);
-
+export default function Home({ characters, weapons }) {
   return (
     <div>
       <Header />
-      <Main characters={characters} />
+      <Main characters={characters} weapons={weapons} />
     </div>
   );
 }
 
 export const getStaticProps = async () => {
   const { data: characters } = await supabase.from("characters").select("*");
+  const { data: weapons } = await supabase.from("weapons").select("*");
 
   return {
     props: {
       characters,
+      weapons,
     },
   };
 };

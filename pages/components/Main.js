@@ -4,8 +4,8 @@ import { format, compareAsc } from "date-fns";
 import CharacterImage from "./CharacterImage";
 import Sidebar from "./Sidebar";
 
-export default function Main({ characters }) {
-  console.log(characters);
+export default function Main({ characters, weapons }) {
+  // console.log(characters);
 
   // this uses date-fns to get todays date
   let today = format(new Date(), "EEEE");
@@ -64,6 +64,20 @@ export default function Main({ characters }) {
                       icon={character.icon}
                       name={character.name}
                     />
+                  </Flex>
+                ) : (
+                  ""
+                )}
+              </div>
+            ))}
+          </Flex>
+          <Flex flexWrap="wrap">
+            {weapons.map((weapon) => (
+              <div key={weapon.id}>
+                {/* map over array that includes todays date */}
+                {weapon.farmable_days.includes(today) ? (
+                  <Flex flexDir="column">
+                    <CharacterImage icon={weapon.image} name={weapon.name} />
                   </Flex>
                 ) : (
                   ""
