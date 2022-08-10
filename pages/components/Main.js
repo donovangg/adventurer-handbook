@@ -19,7 +19,7 @@ export default function Main({ characters, weapons }) {
         flexWrap="wrap"
         gap="12"
         justifyContent="center"
-        backgroundColor="white"
+        backgroundColor="gray.50"
         paddingTop="10"
       >
         <Box

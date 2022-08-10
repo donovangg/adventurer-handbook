@@ -4,7 +4,7 @@ import DrawerNav from "./DrawerNav";
 
 export default function Header() {
   return (
-    <Flex as="header" minH="5vh" backgroundColor="purple.700">
+    <Flex as="header" minH="5vh" backgroundColor="gray.50">
       <DrawerNav />
     </Flex>
   );
