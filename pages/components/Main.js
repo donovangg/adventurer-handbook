@@ -24,15 +24,28 @@ export default function Main({ characters, weapons }) {
       <Sidebar />
       <Flex
         flex="1"
-        flexWrap="wrap"
+        flexDir="column"
         gap="12"
         justifyContent="center"
         backgroundColor="gray.50"
         paddingTop="10"
+        paddingBottom="5rem"
+        border="2px"
+        borderColor="green"
       >
-        <Grid templateColumns="repeat(2, 1fr)" gap="10">
+        <Flex
+          maxW="100%"
+          border="2px"
+          borderColor="red"
+          gap="10"
+          alignItems="center"
+          alignContent="center"
+          margin="0"
+          flexDir={["column", "column", "column", "row"]}
+        >
           <Box
-            w="600px"
+            w={["300px", "300px", "600px", "600px"]}
+            minH="300px"
             maxH="300px"
             boxShadow="2xl"
             rounded="md"
@@ -41,7 +54,8 @@ export default function Main({ characters, weapons }) {
             <Text fontSize="3xl">Hi Adventurer</Text>
           </Box>
           <Box
-            w="600px"
+            w={["300px", "300px", "600px", "600px"]}
+            minH="300px"
             maxH="300px"
             boxShadow="2xl"
             rounded="md"
@@ -49,11 +63,19 @@ export default function Main({ characters, weapons }) {
           >
             <Text fontSize="3xl">Events Box</Text>
           </Box>
-        </Grid>
-        <Grid templateColumns="repeat(2, 1fr)" gap="10">
+        </Flex>
+        <Flex
+          maxW="100%"
+          border="2px"
+          borderColor="blue"
+          gap="10"
+          alignItems="center"
+          margin="0"
+          flexDir={["column", "column", "column", "row"]}
+        >
           <Box
-            w="500px"
-            maxH="300px"
+            w={["300px", "300px", "600px", "600px"]}
+            minH="300px"
             boxShadow="2xl"
             rounded="md"
             backgroundColor="gray.400"
@@ -66,12 +88,6 @@ export default function Main({ characters, weapons }) {
                   {/* map over array that includes todays date */}
                   {character.farmable_days.includes(today) ? (
                     <Flex flexDir="column">
-                      {/* <p>{character.name}</p>
-                    <Image
-                      borderRadius="full"
-                      width="64px"
-                      src={character.icon}
-                    /> */}
                       <CharacterImage
                         icon={character.icon}
                         name={character.name}
@@ -100,6 +116,7 @@ export default function Main({ characters, weapons }) {
           </Box>
           <Box
             w="400px"
+            minH="300px"
             maxH="300px"
             boxShadow="2xl"
             rounded="md"
@@ -107,7 +124,7 @@ export default function Main({ characters, weapons }) {
           >
             <Text fontSize="3xl">Farmable Weapons</Text>
           </Box>
-        </Grid>
+        </Flex>
       </Flex>
     </Flex>
   );
