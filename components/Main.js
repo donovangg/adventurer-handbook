@@ -43,26 +43,52 @@ export default function Main({ characters, weapons }) {
           margin="0"
           flexDir={["column", "column", "column", "row"]}
         >
-          <Box
+          <Flex
+            flexDir="column"
+            justifyContent="center"
             w={["300px", "300px", "600px", "600px"]}
             minH="300px"
             maxH="300px"
             boxShadow="2xl"
             rounded="md"
             backgroundColor="white"
+            border="2px"
+            position="relative"
+            background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/adventurers-guild.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvYWR2ZW50dXJlcnMtZ3VpbGQud2VicCIsImlhdCI6MTY2MDIwMzQ5NywiZXhwIjoxOTc1NTYzNDk3fQ.RSJgcWdgAhOBCim0BfsqvXqwHqJ6dxR7WCp_8v1SnFM) center/cover no-repeat"
           >
-            <Text fontSize="3xl">Hi Adventurer</Text>
-          </Box>
-          <Box
+            <Box
+              backgroundColor="teal.900"
+              position="absolute"
+              width="100%"
+              height="100%"
+              opacity="50%"
+            ></Box>
+            <Text color="white" textAlign="center" zIndex="6" fontSize="3xl">
+              Hi Adventurer its {today}
+            </Text>
+            <Text color="white" zIndex="6" textAlign="center">
+              Make sure you do your commissions and try the event
+            </Text>
+          </Flex>
+          <Flex
             w={["300px", "300px", "600px", "600px"]}
             minH="300px"
             maxH="300px"
             boxShadow="2xl"
             rounded="md"
             backgroundColor="white"
+            position="relative"
+            background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/summertime-odyssey.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvc3VtbWVydGltZS1vZHlzc2V5LndlYnAiLCJpYXQiOjE2NjAyMDU1NjAsImV4cCI6MTk3NTU2NTU2MH0.vOjT2h2MciX8kpVqAVdknCcHhEpjNqt5YEDggBMZSRg) right/cover no-repeat"
           >
+            <Box
+              backgroundColor="teal.900"
+              position="absolute"
+              width="100%"
+              height="100%"
+              opacity="50%"
+            ></Box>
             <Text fontSize="3xl">Events Box</Text>
-          </Box>
+          </Flex>
         </Flex>
         <Flex
           maxW="100%"
@@ -78,7 +104,6 @@ export default function Main({ characters, weapons }) {
             minH="300px"
             boxShadow="2xl"
             rounded="md"
-            backgroundColor="gray.400"
             padding="2"
           >
             <h2>Farmable today</h2>
