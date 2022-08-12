@@ -40,13 +40,14 @@ export default function Main({ characters, weapons }) {
           gap="10"
           alignItems="center"
           alignContent="center"
+          justifyContent="center"
           margin="0"
           flexDir={["column", "column", "column", "row"]}
         >
           <Flex
             flexDir="column"
             justifyContent="center"
-            w={["300px", "300px", "600px", "600px"]}
+            w={["100%", "90%", "600px", "600px"]}
             minH="300px"
             maxH="300px"
             boxShadow="2xl"
@@ -71,7 +72,7 @@ export default function Main({ characters, weapons }) {
             </Text>
           </Flex>
           <Flex
-            w={["300px", "300px", "600px", "600px"]}
+            w={["100%", "90%", "600px", "600px"]}
             minH="300px"
             maxH="300px"
             boxShadow="2xl"
@@ -96,11 +97,12 @@ export default function Main({ characters, weapons }) {
           borderColor="blue"
           gap="10"
           alignItems="center"
+          justifyContent="center"
           margin="0"
           flexDir={["column", "column", "column", "row"]}
         >
           <Box
-            w={["300px", "300px", "600px", "600px"]}
+            w={["100%", "90%", "600px", "600px"]}
             minH="300px"
             boxShadow="2xl"
             rounded="md"
