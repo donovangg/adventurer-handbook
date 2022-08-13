@@ -7,6 +7,7 @@ import {
   Image,
   Grid,
   GridItem,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { format, compareAsc } from "date-fns";
 import CharacterImage from "./CharacterImage";
@@ -14,7 +15,7 @@ import Sidebar from "./Sidebar";
 
 export default function Main({ characters, weapons }) {
   // console.log(characters);
-
+  const background = useColorModeValue("gray.800", "gray.50");
   // this uses date-fns to get todays date
   let today = format(new Date(), "EEEE");
   console.log(today);
@@ -27,7 +28,7 @@ export default function Main({ characters, weapons }) {
         flexDir="column"
         gap="12"
         justifyContent="center"
-        backgroundColor="gray.50"
+        backgroundColor={background}
         paddingTop="10"
         paddingBottom="5rem"
         border="2px"
