@@ -17,24 +17,29 @@ export default function Main({ characters, weapons }) {
 
   // this uses date-fns to get todays date
   let today = format(new Date(), "EEEE");
-  console.log(today);
+
+  // convert to epoch time than to GMT for utc time
+  let epoch = Math.floor(new Date().getTime() / 1000.0)
+  let myDate = new Date( epoch *1000);
+  let current_day = myDate.toGMTString()
+  console.log(current_day)
 
   return (
-    <Flex>
-      <Sidebar />
+    <Flex border="3px">
+      <Sidebar flex="1" />
       <Flex
         flex="1"
         flexDir="column"
         gap="12"
         justifyContent="center"
-        backgroundColor="gray.50"
         paddingTop="10"
         paddingBottom="5rem"
         border="2px"
+        maxW="100%"
         borderColor="green"
       >
         <Flex
-          maxW="100%"
+          width="100%"
           border="2px"
           borderColor="red"
           gap="10"
@@ -47,7 +52,7 @@ export default function Main({ characters, weapons }) {
           <Flex
             flexDir="column"
             justifyContent="center"
-            w={["100%", "90%", "600px", "600px"]}
+            w={["100%", "90%", "70%", "40%"]}
             minH="300px"
             maxH="300px"
             boxShadow="2xl"
@@ -64,7 +69,15 @@ export default function Main({ characters, weapons }) {
               height="100%"
               opacity="50%"
             ></Box>
-            <Text color="white" textAlign="center" zIndex="6" fontSize="3xl">
+            <Text
+              color="white"
+              textAlign="center"
+              zIndex="6"
+              fontSize="3xl"
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgClip="text"
+              fontWeight="extrabold"
+            >
               Hi Adventurer its {today}
             </Text>
             <Text color="white" zIndex="6" textAlign="center">
@@ -72,7 +85,7 @@ export default function Main({ characters, weapons }) {
             </Text>
           </Flex>
           <Flex
-            w={["100%", "90%", "600px", "600px"]}
+            w={["100%", "90%", "70%", "40%"]}
             minH="300px"
             maxH="300px"
             boxShadow="2xl"
@@ -108,7 +121,14 @@ export default function Main({ characters, weapons }) {
             rounded="md"
             padding="2"
           >
-            <h2>Farmable today</h2>
+            <Text
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgClip="text"
+              fontSize="3xl"
+              fontWeight="extrabold"
+            >
+              Farmable today
+            </Text>
             <Flex flexWrap="wrap">
               {characters.map((character) => (
                 <div key={character.id}>
@@ -141,16 +161,25 @@ export default function Main({ characters, weapons }) {
               ))}
             </Flex>
           </Box>
-          <Box
-            w="400px"
+          <Flex
+            w={["100%", "90%", "70%", "40%"]}
             minH="300px"
             maxH="300px"
             boxShadow="2xl"
             rounded="md"
             backgroundColor="white"
+            position="relative"
+            background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/golden-flames.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvZ29sZGVuLWZsYW1lcy53ZWJwIiwiaWF0IjoxNjYwNDI0ODE3LCJleHAiOjE5NzU3ODQ4MTd9.eVBSbyOeA92CG5tcsuoHdTseaHnvBlpBtPZU98VsQ90) right/cover no-repeat"
           >
-            <Text fontSize="3xl">Farmable Weapons</Text>
-          </Box>
+            <Box
+              backgroundColor="teal.900"
+              position="absolute"
+              width="100%"
+              height="100%"
+              opacity="50%"
+            ></Box>
+            <Text fontSize="3xl">Wishes Box</Text>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
