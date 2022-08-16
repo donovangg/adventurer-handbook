@@ -33,10 +33,7 @@ export default function Main({ characters, weapons }) {
         flexDir="column"
         gap="12"
         justifyContent="center"
-<<<<<<< HEAD
         backgroundColor={background}
-=======
->>>>>>> 8701e3d11983844a72afbffaf665910fa9bec186
         paddingTop="10"
         paddingBottom="5rem"
         border="2px"

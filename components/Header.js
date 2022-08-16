@@ -10,13 +10,13 @@ import {
   useColorMode,
   Button,
 } from "@chakra-ui/react";
-import { FaBeer, FaGithub, FaMoon, FaSun } from "react-icons/fa";
+import { FaBars, FaGithub, FaMoon, FaSun } from "react-icons/fa";
 import Link from "next/link";
 import DrawerNav from "./DrawerNav";
 
 export default function Header({ colorMode, useColorMode, toggleColorMode }) {
   return (
-    <Flex as="header" minH="5vh" backgroundColor="purple.500">
+    <Flex as="header" minH="5vh" backgroundColor="teal.500">
       <DrawerNav />
       <Flex>
         <Link href="https://github.com/donovangomez/portfolio/tree/main/src">
