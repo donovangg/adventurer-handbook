@@ -13,12 +13,17 @@ export default function Sidebar() {
 
   return (
     <Flex
+<<<<<<< HEAD
       backgroundColor={background}
       width="15vw"
+=======
+      backgroundColor="gray.50"
+      minWidth="15vw"
+>>>>>>> 8701e3d11983844a72afbffaf665910fa9bec186
       height="100vh"
       flexDir="column"
       borderRight="1px"
-      display={["none", "none", "block", "block"]}
+      display={["none", "none", "none", "none", "block"]}
     >
       Sidebar
     </Flex>
