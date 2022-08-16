@@ -16,7 +16,7 @@ export default function Sidebar() {
       backgroundColor={background}
       width="15vw"
       minWidth="15vw"
-      height="100vh"
+      minHeight="100vh"
       flexDir="column"
       borderRight="1px"
       display={["none", "none", "none", "none", "block"]}

@@ -20,13 +20,13 @@ export default function Main({ characters, weapons }) {
   let today = format(new Date(), "EEEE");
 
   // convert to epoch time than to GMT for utc time
-  let epoch = Math.floor(new Date().getTime() / 1000.0)
-  let myDate = new Date( epoch *1000);
-  let current_day = myDate.toGMTString()
-  console.log(current_day)
+  let epoch = Math.floor(new Date().getTime() / 1000.0);
+  let myDate = new Date(epoch * 1000);
+  let current_day = myDate.toGMTString();
+  console.log(current_day);
 
   return (
-    <Flex border="3px">
+    <Flex>
       <Sidebar flex="1" />
       <Flex
         flex="1"
@@ -36,14 +36,10 @@ export default function Main({ characters, weapons }) {
         backgroundColor={background}
         paddingTop="10"
         paddingBottom="5rem"
-        border="2px"
         maxW="100%"
-        borderColor="green"
       >
         <Flex
           width="100%"
-          border="2px"
-          borderColor="red"
           gap="10"
           alignItems="center"
           alignContent="center"
@@ -60,24 +56,23 @@ export default function Main({ characters, weapons }) {
             boxShadow="2xl"
             rounded="md"
             backgroundColor="white"
-            border="2px"
             position="relative"
             background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/adventurers-guild.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvYWR2ZW50dXJlcnMtZ3VpbGQud2VicCIsImlhdCI6MTY2MDIwMzQ5NywiZXhwIjoxOTc1NTYzNDk3fQ.RSJgcWdgAhOBCim0BfsqvXqwHqJ6dxR7WCp_8v1SnFM) center/cover no-repeat"
           >
             <Box
-              backgroundColor="teal.900"
               position="absolute"
+              boxShadow="2xl"
+              rounded="lg"
               width="100%"
               height="100%"
-              opacity="50%"
+              opacity="70%"
+              backgroundColor="green.600"
             ></Box>
             <Text
               color="white"
               textAlign="center"
               zIndex="6"
               fontSize="3xl"
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
-              bgClip="text"
               fontWeight="extrabold"
             >
               Hi Adventurer its {today}
@@ -88,28 +83,28 @@ export default function Main({ characters, weapons }) {
           </Flex>
           <Flex
             w={["100%", "90%", "70%", "40%"]}
+            boxShadow="2xl"
+            rounded="lg"
             minH="300px"
             maxH="300px"
-            boxShadow="2xl"
-            rounded="md"
             backgroundColor="white"
             position="relative"
             background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/summertime-odyssey.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvc3VtbWVydGltZS1vZHlzc2V5LndlYnAiLCJpYXQiOjE2NjAyMDU1NjAsImV4cCI6MTk3NTU2NTU2MH0.vOjT2h2MciX8kpVqAVdknCcHhEpjNqt5YEDggBMZSRg) right/cover no-repeat"
           >
             <Box
-              backgroundColor="teal.900"
+              backgroundColor="green.900"
+              boxShadow="2xl"
+              rounded="lg"
               position="absolute"
               width="100%"
               height="100%"
-              opacity="50%"
+              opacity="90%"
             ></Box>
             <Text fontSize="3xl">Events Box</Text>
           </Flex>
         </Flex>
         <Flex
           maxW="100%"
-          border="2px"
-          borderColor="blue"
           gap="10"
           alignItems="center"
           justifyContent="center"
@@ -120,11 +115,11 @@ export default function Main({ characters, weapons }) {
             w={["100%", "90%", "600px", "600px"]}
             minH="300px"
             boxShadow="2xl"
-            rounded="md"
+            rounded="lg"
             padding="2"
           >
             <Text
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgGradient="linear(to-l, #38A169, #0075A0)"
               bgClip="text"
               fontSize="3xl"
               fontWeight="extrabold"
@@ -168,12 +163,14 @@ export default function Main({ characters, weapons }) {
             minH="300px"
             maxH="300px"
             boxShadow="2xl"
-            rounded="md"
+            rounded="lg"
             backgroundColor="white"
             position="relative"
             background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/golden-flames.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvZ29sZGVuLWZsYW1lcy53ZWJwIiwiaWF0IjoxNjYwNDI0ODE3LCJleHAiOjE5NzU3ODQ4MTd9.eVBSbyOeA92CG5tcsuoHdTseaHnvBlpBtPZU98VsQ90) right/cover no-repeat"
           >
             <Box
+              boxShadow="2xl"
+              rounded="lg"
               backgroundColor="teal.900"
               position="absolute"
               width="100%"
