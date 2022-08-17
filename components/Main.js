@@ -82,6 +82,8 @@ export default function Main({ characters, weapons }) {
             </Text>
           </Flex>
           <Flex
+            flexDir="column"
+            justifyContent="center"
             w={["100%", "90%", "70%", "40%"]}
             boxShadow="2xl"
             rounded="lg"
@@ -90,17 +92,27 @@ export default function Main({ characters, weapons }) {
             backgroundColor="white"
             position="relative"
             background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/summertime-odyssey.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvc3VtbWVydGltZS1vZHlzc2V5LndlYnAiLCJpYXQiOjE2NjAyMDU1NjAsImV4cCI6MTk3NTU2NTU2MH0.vOjT2h2MciX8kpVqAVdknCcHhEpjNqt5YEDggBMZSRg) right/cover no-repeat"
+            role="group"
           >
             <Box
-              backgroundColor="green.900"
+              backgroundColor="green.600"
               boxShadow="2xl"
               rounded="lg"
               position="absolute"
               width="100%"
               height="100%"
-              opacity="90%"
+              opacity="80%"
+              _groupHover={{ opacity: "0" }}
             ></Box>
-            <Text fontSize="3xl">Events Box</Text>
+            <Text
+              textAlign="center"
+              color="white"
+              zIndex="6"
+              fontSize="3xl"
+              _groupHover={{ display: "none" }}
+            >
+              Current Event
+            </Text>
           </Flex>
         </Flex>
         <Flex
@@ -159,6 +171,9 @@ export default function Main({ characters, weapons }) {
             </Flex>
           </Box>
           <Flex
+            flexDir="column"
+            justifyContent="center"
+            alignAitems="center"
             w={["100%", "90%", "70%", "40%"]}
             minH="300px"
             maxH="300px"
@@ -167,17 +182,27 @@ export default function Main({ characters, weapons }) {
             backgroundColor="white"
             position="relative"
             background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/golden-flames.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvZ29sZGVuLWZsYW1lcy53ZWJwIiwiaWF0IjoxNjYwNDI0ODE3LCJleHAiOjE5NzU3ODQ4MTd9.eVBSbyOeA92CG5tcsuoHdTseaHnvBlpBtPZU98VsQ90) right/cover no-repeat"
+            role="group"
           >
             <Box
+              backgroundColor="green.600"
               boxShadow="2xl"
               rounded="lg"
-              backgroundColor="teal.900"
               position="absolute"
               width="100%"
               height="100%"
-              opacity="50%"
+              opacity="80%"
+              _groupHover={{ opacity: "0" }}
             ></Box>
-            <Text fontSize="3xl">Wishes Box</Text>
+            <Text
+              color="white"
+              zIndex="6"
+              textAlign="center"
+              fontSize="3xl"
+              _groupHover={{ display: "none" }}
+            >
+              Featured Wish
+            </Text>
           </Flex>
         </Flex>
       </Flex>
