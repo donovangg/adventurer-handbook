@@ -102,7 +102,7 @@ export default function Main({ characters, weapons }) {
               width="100%"
               height="100%"
               opacity="80%"
-              _groupHover={{ opacity: "0" }}
+              _groupHover={{ opacity: "0", transition: "500ms" }}
             ></Box>
             <Text
               textAlign="center"
@@ -192,7 +192,7 @@ export default function Main({ characters, weapons }) {
               width="100%"
               height="100%"
               opacity="80%"
-              _groupHover={{ opacity: "0" }}
+              _groupHover={{ opacity: "0", transition: "500ms"  }}
             ></Box>
             <Text
               color="white"
