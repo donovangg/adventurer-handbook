@@ -24,16 +24,8 @@ export default function Header({ colorMode, useColorMode, toggleColorMode }) {
             <IconButton icon={<FaGithub />} />
           </a>
         </Link>
-        <Button onClick={toggleColorMode}>asdsa</Button>
-        {/* <IconButton
-          icon={colorMode == "light" ? <FaMoon /> : <FaSun />}
-          aria-label="Toggle theme"
-          onClick={toggleColorMode}
-          variant="unstyled"
-          fontSize="2xl"
-          _hover={{ color: "blue.400" }}
-          _focus={{ border: "none", backgroundColor: "transparent" }}
-        /> */}
+        {/* toggle darkmode button */}
+        {/* <Button onClick={toggleColorMode}>asdsa</Button> */}
       </Flex>
     </Flex>
   );

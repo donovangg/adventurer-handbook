@@ -5,13 +5,10 @@ import Header from "../components/Header";
 import { useColorMode } from "@chakra-ui/react";
 
 export default function Home({ characters, weapons }) {
-  const { toggleColorMode, colorMode } = useColorMode();
+  // const { toggleColorMode, colorMode } = useColorMode();
   return (
     <div>
       <Header
-        toggleColorMode={toggleColorMode}
-        colorMode={colorMode}
-        useColorMode={useColorMode}
       />
       <Main characters={characters} weapons={weapons} />
     </div>

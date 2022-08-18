@@ -16,7 +16,7 @@ import Layout from "./Layout";
 
 export default function Main({ characters, weapons }) {
   // console.log(characters);
-  const background = useColorModeValue("gray.800", "gray.50");
+  // const background = useColorModeValue("gray.800", "gray.50");
   // this uses date-fns to get todays date
   let today = format(new Date(), "EEEE");
 
@@ -34,10 +34,10 @@ export default function Main({ characters, weapons }) {
         flexDir="column"
         gap="12"
         justifyContent="center"
-        backgroundColor={background}
         paddingTop="10"
         paddingBottom="5rem"
         maxW="100%"
+        backgroundColor="gray.50"
       >
         <Flex
           width="100%"
