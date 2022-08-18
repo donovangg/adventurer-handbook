@@ -12,6 +12,7 @@ import {
 import { format, compareAsc } from "date-fns";
 import CharacterImage from "./CharacterImage";
 import Sidebar from "./Sidebar";
+import Layout from "./Layout";
 
 export default function Main({ characters, weapons }) {
   // console.log(characters);
@@ -26,7 +27,7 @@ export default function Main({ characters, weapons }) {
   console.log(current_day);
 
   return (
-    <Flex>
+    <Flex as="main">
       <Sidebar flex="1" />
       <Flex
         flex="1"
