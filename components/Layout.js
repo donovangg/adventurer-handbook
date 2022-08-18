@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       <Header />
       <Flex>
         <Sidebar />
-        <main>{children}</main>
+        <Flex flex="1" maxW="100%">{children}</Flex>
       </Flex>
     </>
   );

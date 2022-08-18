@@ -8,8 +8,7 @@ export default function Home({ characters, weapons }) {
   // const { toggleColorMode, colorMode } = useColorMode();
   return (
     <div>
-      <Header
-      />
+      <Header />
       <Main characters={characters} weapons={weapons} />
     </div>
   );
