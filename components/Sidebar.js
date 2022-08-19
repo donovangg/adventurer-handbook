@@ -16,6 +16,8 @@ export default function Sidebar() {
     <Flex
       alignItems="center"
       justifyContent="flex-start"
+      borderRight="2px"
+      borderColor="purple.400"
       color="black"
       width="15vw"
       minWidth="15vw"

@@ -37,7 +37,7 @@ export default function Main({ characters, weapons }) {
         paddingTop="10"
         paddingBottom="5rem"
         maxW="100%"
-        backgroundColor="gray.50"
+        backgroundColor="gray.100"
       >
         <Flex
           width="100%"
@@ -73,12 +73,12 @@ export default function Main({ characters, weapons }) {
               color="white"
               textAlign="center"
               zIndex="6"
-              fontSize="3xl"
+              fontSize="4xl"
               fontWeight="extrabold"
             >
               Hi Adventurer its {today}
             </Text>
-            <Text color="white" zIndex="6" textAlign="center">
+            <Text color="white" fontSize="xl" zIndex="6" textAlign="center">
               Make sure you do your commissions and try the event
             </Text>
           </Flex>

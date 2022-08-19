@@ -23,8 +23,9 @@ export default function TodoList({ characters, weapons }) {
         color="black"
         justifyContent="center"
         alignItems="center"
-        flexDir="column"
-        backgroundColor="gray.50"
+        flexDir={["column", "column", "column", "row"]}
+        backgroundColor="gray.100"
+        gap="10"
       >
         <Flex
           flexDir="column"
@@ -49,10 +50,10 @@ export default function TodoList({ characters, weapons }) {
           padding="2"
         >
           <Text
-            bgGradient="linear(to-l, #38A169, #0075A0)"
-            bgClip="text"
-            fontSize="3xl"
-            fontWeight="extrabold"
+           bgGradient="linear(to-l, #6B46C1, #CF3DA9)"
+           bgClip="text"
+           fontSize="3xl"
+           fontWeight="extrabold"
           >
             Farmable today
           </Text>
