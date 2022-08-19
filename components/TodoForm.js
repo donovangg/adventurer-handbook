@@ -34,10 +34,10 @@ export default function TodoForm({ todos, setTodos, inputText, setInputText }) {
           value={inputText}
           variant="flushed"
           size="lg"
-          borderColor="green.600"
-          focusBorderColor='green.200'
+          borderColor="purple.600"
+          focusBorderColor='pink.300'
         />
-        <Button onClick={addTodoHandler} colorScheme="green">Add</Button>
+        <Button onClick={addTodoHandler} colorScheme="purple">Add</Button>
         </Flex>
       </FormControl>
     </div>

@@ -6,8 +6,8 @@ export default function Todo({ text, completed }) {
   return (
     <Flex width="100%" border="@2px">
       <Text flex="1">{text}</Text>
-      <IconButton variant="outline" colorScheme="teal" icon={<FaCheck />} />
-      <IconButton variant="outline" colorScheme="teal" icon={<FaTrashAlt />} />
+      <IconButton variant="outline" colorScheme="purple" icon={<FaCheck />} />
+      <IconButton variant="outline" colorScheme="purple" icon={<FaTrashAlt />} />
     </Flex>
   );
 }

@@ -67,7 +67,7 @@ export default function Main({ characters, weapons }) {
               width="100%"
               height="100%"
               opacity="70%"
-              backgroundColor="green.600"
+              backgroundColor="purple.600"
             ></Box>
             <Text
               color="white"
@@ -96,7 +96,7 @@ export default function Main({ characters, weapons }) {
             role="group"
           >
             <Box
-              backgroundColor="green.600"
+              backgroundColor="purple.600"
               boxShadow="2xl"
               rounded="lg"
               position="absolute"
@@ -132,7 +132,7 @@ export default function Main({ characters, weapons }) {
             padding="2"
           >
             <Text
-              bgGradient="linear(to-l, #38A169, #0075A0)"
+              bgGradient="linear(to-l, #6B46C1, #CF3DA9)"
               bgClip="text"
               fontSize="3xl"
               fontWeight="extrabold"
@@ -186,7 +186,7 @@ export default function Main({ characters, weapons }) {
             role="group"
           >
             <Box
-              backgroundColor="green.600"
+              backgroundColor="purple.600"
               boxShadow="2xl"
               rounded="lg"
               position="absolute"

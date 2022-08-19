@@ -24,13 +24,11 @@ export default function TodoList({ characters, weapons }) {
         justifyContent="center"
         alignItems="center"
         flexDir="column"
-        border="2px"
         backgroundColor="gray.50"
       >
         <Flex
           flexDir="column"
           p="4"
-          border="2px"
           backgroundColor="white"
           minH="22rem"
           minW="30rem"
@@ -42,54 +40,54 @@ export default function TodoList({ characters, weapons }) {
             setInputText={setInputText}
           />
           <TodoContainer todos={todos} inputText={inputText} />
-          <Box
-            w={["100%", "90%", "600px", "600px"]}
-            minH="300px"
-            boxShadow="2xl"
-            rounded="lg"
-            padding="2"
-          >
-            <Text
-              bgGradient="linear(to-l, #38A169, #0075A0)"
-              bgClip="text"
-              fontSize="3xl"
-              fontWeight="extrabold"
-            >
-              Farmable today
-            </Text>
-            <Flex flexWrap="wrap">
-              {characters.map((character) => (
-                <div key={character.id}>
-                  {/* map over array that includes todays date */}
-                  {character.farmable_days.includes(today) ? (
-                    <Flex flexDir="column">
-                      <CharacterImage
-                        icon={character.icon}
-                        name={character.name}
-                      />
-                    </Flex>
-                  ) : (
-                    ""
-                  )}
-                </div>
-              ))}
-            </Flex>
-            <Flex flexWrap="wrap">
-              {weapons.map((weapon) => (
-                <div key={weapon.id}>
-                  {/* map over array that includes todays date */}
-                  {weapon.farmable_days.includes(today) ? (
-                    <Flex flexDir="column">
-                      <CharacterImage icon={weapon.image} name={weapon.name} />
-                    </Flex>
-                  ) : (
-                    ""
-                  )}
-                </div>
-              ))}
-            </Flex>
-          </Box>
         </Flex>
+        <Box
+          w={["100%", "90%", "600px", "600px"]}
+          minH="300px"
+          boxShadow="2xl"
+          rounded="lg"
+          padding="2"
+        >
+          <Text
+            bgGradient="linear(to-l, #38A169, #0075A0)"
+            bgClip="text"
+            fontSize="3xl"
+            fontWeight="extrabold"
+          >
+            Farmable today
+          </Text>
+          <Flex flexWrap="wrap">
+            {characters.map((character) => (
+              <div key={character.id}>
+                {/* map over array that includes todays date */}
+                {character.farmable_days.includes(today) ? (
+                  <Flex flexDir="column">
+                    <CharacterImage
+                      icon={character.icon}
+                      name={character.name}
+                    />
+                  </Flex>
+                ) : (
+                  ""
+                )}
+              </div>
+            ))}
+          </Flex>
+          <Flex flexWrap="wrap">
+            {weapons.map((weapon) => (
+              <div key={weapon.id}>
+                {/* map over array that includes todays date */}
+                {weapon.farmable_days.includes(today) ? (
+                  <Flex flexDir="column">
+                    <CharacterImage icon={weapon.image} name={weapon.name} />
+                  </Flex>
+                ) : (
+                  ""
+                )}
+              </div>
+            ))}
+          </Flex>
+        </Box>
       </Flex>
     </Layout>
   );

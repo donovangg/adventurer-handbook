@@ -16,12 +16,18 @@ import DrawerNav from "./DrawerNav";
 
 export default function Header({ colorMode, useColorMode, toggleColorMode }) {
   return (
-    <Flex as="header" minH="5vh"  borderTop="4px" borderColor="green.600">
+    <Flex
+      as="header"
+      minH="5vh"
+      borderTop="4px"
+      borderColor="purple.600"
+      justifyContent="flex-end"
+    >
       <DrawerNav />
-      <Flex>
+      <Flex justifyContent="center">
         <Link href="https://github.com/donovangomez/portfolio/tree/main/src">
           <a>
-            <IconButton icon={<FaGithub />} />
+            <IconButton icon={<FaGithub />} variant="transparent" />
           </a>
         </Link>
         {/* toggle darkmode button */}

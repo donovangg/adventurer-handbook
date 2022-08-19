@@ -21,7 +21,6 @@ export default function Sidebar() {
       minWidth="15vw"
       minHeight="100vh"
       flexDir="column"
-      borderRight="1px"
       display={["none", "none", "none", "flex"]}
     >
       <Flex as="nav" flexDir="column" minH="50%">
