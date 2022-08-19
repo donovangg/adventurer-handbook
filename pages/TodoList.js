@@ -40,7 +40,7 @@ export default function TodoList({ characters, weapons }) {
             inputText={inputText}
             setInputText={setInputText}
           />
-          <TodoContainer todos={todos} inputText={inputText} />
+          <TodoContainer todos={todos} setTodos={setTodos} inputText={inputText} />
         </Flex>
         <Box
           w={["100%", "90%", "600px", "600px"]}
