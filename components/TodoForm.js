@@ -6,6 +6,7 @@ import {
   FormErrorMessage,
   FormHelperText,
   Input,
+  Flex
 } from "@chakra-ui/react";
 
 export default function TodoForm({ todos, setTodos, inputText, setInputText }) {
@@ -24,14 +25,20 @@ export default function TodoForm({ todos, setTodos, inputText, setInputText }) {
 
   return (
     <div>
-      <FormControl>
+      <FormControl marginTop="10">
+        <Flex width="30rem">
         <Input
           type="text"
           onChange={inputTextHandler}
           placeholder="Add todo"
           value={inputText}
+          variant="flushed"
+          size="lg"
+          borderColor="green.600"
+          focusBorderColor='green.200'
         />
-        <Button onClick={addTodoHandler}>Add</Button>
+        <Button onClick={addTodoHandler} colorScheme="green">Add</Button>
+        </Flex>
       </FormControl>
     </div>
   );

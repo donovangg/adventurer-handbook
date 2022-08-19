@@ -16,7 +16,7 @@ import DrawerNav from "./DrawerNav";
 
 export default function Header({ colorMode, useColorMode, toggleColorMode }) {
   return (
-    <Flex as="header" minH="5vh" backgroundColor="green.500">
+    <Flex as="header" minH="5vh"  borderTop="4px" borderColor="green.600">
       <DrawerNav />
       <Flex>
         <Link href="https://github.com/donovangomez/portfolio/tree/main/src">

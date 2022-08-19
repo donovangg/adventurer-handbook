@@ -10,7 +10,7 @@ export default function TodoList() {
   const [inputText, setInputText] = useState("");
   return (
     <Layout>
-      <Flex flex="1" color="black" backgroundColor="gray.50">
+      <Flex flex="1" color="black" justifyContent="center" alignItems="center" flexDir="column" border="2px" backgroundColor="gray.50">
         <TodoForm
           todos={todos}
           setTodos={setTodos}
