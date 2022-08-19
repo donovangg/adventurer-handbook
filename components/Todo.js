@@ -1,12 +1,13 @@
-import React from 'react'
-import { Box, Flex, Text, Button } from "@chakra-ui/react";
+import React from "react";
+import { Box, Flex, Text, Button, IconButton } from "@chakra-ui/react";
+import { FaCheck, FaTrashAlt } from "react-icons/fa";
 
-export default function Todo({text, completed}) {
+export default function Todo({ text, completed }) {
   return (
     <Flex width="100%" border="@2px">
-        <Text flex="1">{text}</Text>
-        <Button>dsad</Button>
-        <Button>iuyb</Button>
+      <Text flex="1">{text}</Text>
+      <IconButton variant="outline" colorScheme="teal" icon={<FaCheck />} />
+      <IconButton variant="outline" colorScheme="teal" icon={<FaTrashAlt />} />
     </Flex>
-  )
+  );
 }
