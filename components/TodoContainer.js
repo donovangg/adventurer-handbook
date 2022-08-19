@@ -1,15 +1,15 @@
 import React from "react";
 import Todo from "./Todo";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, UnorderedList } from "@chakra-ui/react";
 
 export default function TodoContainer({ todos }) {
   return (
-    <div>
+    <Box marginTop="12">
       {todos.map((todo) => (
-        <div key={todo.id}>
+        <UnorderedList key={todo.id}>
           <Todo text={todo.text} completed={todo.completed} />
-        </div>
+        </UnorderedList>
       ))}
-    </div>
+    </Box>
   );
 }

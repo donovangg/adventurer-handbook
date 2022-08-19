@@ -12,7 +12,7 @@ import {
 import { format, compareAsc } from "date-fns";
 import CharacterImage from "./CharacterImage";
 import Sidebar from "./Sidebar";
-import Layout from "./Layout";
+import TodoContainer from "./TodoContainer";
 
 export default function Main({ characters, weapons }) {
   // console.log(characters);
