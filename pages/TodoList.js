@@ -23,7 +23,7 @@ export default function TodoList({ characters, weapons }) {
         color="black"
         justifyContent="center"
         alignItems="center"
-        flexDir={["column", "column", "column", "row"]}
+        flexDir={["column", "column", "column", "column", "row"]}
         backgroundColor="gray.100"
         gap="10"
       >
@@ -48,6 +48,7 @@ export default function TodoList({ characters, weapons }) {
           boxShadow="2xl"
           rounded="lg"
           padding="2"
+          backgroundColor="white"
         >
           <Text
            bgGradient="linear(to-l, #6B46C1, #CF3DA9)"
