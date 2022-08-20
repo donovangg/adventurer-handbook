@@ -14,7 +14,6 @@ export default function TodoList({ characters, weapons }) {
   ]);
   const [inputText, setInputText] = useState("");
   let today = format(new Date(), "EEEE");
-  console.log(characters);
   return (
     <Layout>
       <Flex
@@ -42,54 +41,6 @@ export default function TodoList({ characters, weapons }) {
           />
           <TodoContainer todos={todos} setTodos={setTodos} inputText={inputText} />
         </Flex>
-        <Box
-          w={["100%", "90%", "600px", "600px"]}
-          minH="300px"
-          boxShadow="2xl"
-          rounded="lg"
-          padding="2"
-          backgroundColor="white"
-        >
-          <Text
-           bgGradient="linear(to-l, #6B46C1, #CF3DA9)"
-           bgClip="text"
-           fontSize="3xl"
-           fontWeight="extrabold"
-          >
-            Farmable today
-          </Text>
-          <Flex flexWrap="wrap">
-            {characters.map((character) => (
-              <div key={character.id}>
-                {/* map over array that includes todays date */}
-                {character.farmable_days.includes(today) ? (
-                  <Flex flexDir="column">
-                    <CharacterImage
-                      icon={character.icon}
-                      name={character.name}
-                    />
-                  </Flex>
-                ) : (
-                  ""
-                )}
-              </div>
-            ))}
-          </Flex>
-          <Flex flexWrap="wrap">
-            {weapons.map((weapon) => (
-              <div key={weapon.id}>
-                {/* map over array that includes todays date */}
-                {weapon.farmable_days.includes(today) ? (
-                  <Flex flexDir="column">
-                    <CharacterImage icon={weapon.image} name={weapon.name} />
-                  </Flex>
-                ) : (
-                  ""
-                )}
-              </div>
-            ))}
-          </Flex>
-        </Box>
       </Flex>
     </Layout>
   );
