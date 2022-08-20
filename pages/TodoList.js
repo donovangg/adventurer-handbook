@@ -46,14 +46,14 @@ export default function TodoList({ characters, weapons }) {
   );
 }
 
-export const getStaticProps = async () => {
-  const { data: characters } = await supabase.from("characters").select("*");
-  const { data: weapons } = await supabase.from("weapons").select("*");
+// export const getStaticProps = async () => {
+//   const { data: characters } = await supabase.from("characters").select("*");
+//   const { data: weapons } = await supabase.from("weapons").select("*");
 
-  return {
-    props: {
-      characters,
-      weapons,
-    },
-  };
-};
+//   return {
+//     props: {
+//       characters,
+//       weapons,
+//     },
+//   };
+// };
