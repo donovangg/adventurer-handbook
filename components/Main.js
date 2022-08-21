@@ -8,11 +8,12 @@ import {
   Grid,
   GridItem,
   useColorModeValue,
+  Link,
 } from "@chakra-ui/react";
 import { format, compareAsc } from "date-fns";
 import CharacterImage from "./CharacterImage";
 import Sidebar from "./Sidebar";
-import TodoContainer from "./TodoContainer";
+import NextLink from "next/link";
 
 export default function Main({ characters, weapons }) {
   // console.log(characters);
@@ -95,25 +96,31 @@ export default function Main({ characters, weapons }) {
             background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/summertime-odyssey.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvc3VtbWVydGltZS1vZHlzc2V5LndlYnAiLCJpYXQiOjE2NjAyMDU1NjAsImV4cCI6MTk3NTU2NTU2MH0.vOjT2h2MciX8kpVqAVdknCcHhEpjNqt5YEDggBMZSRg) right/cover no-repeat"
             role="group"
           >
-            <Box
-              backgroundColor="purple.600"
-              boxShadow="2xl"
-              rounded="lg"
-              position="absolute"
-              width="100%"
-              height="100%"
-              opacity="80%"
-              _groupHover={{ opacity: "0", transition: "500ms" }}
-            ></Box>
-            <Text
-              textAlign="center"
-              color="white"
-              zIndex="6"
-              fontSize="3xl"
-              _groupHover={{ display: "none" }}
-            >
-              Current Event
-            </Text>
+            <NextLink href="/characters">
+              <Link>
+                <Box
+                  backgroundColor="purple.600"
+                  boxShadow="2xl"
+                  rounded="lg"
+                  position="absolute"
+                  top="0"
+                  width="100%"
+                  height="100%"
+                  opacity="80%"
+                  _groupHover={{ opacity: "0", transition: "500ms" }}
+                ></Box>
+                <Text
+                  textAlign="center"
+                  color="white"
+                  zIndex="6"
+                  position="relative"
+                  fontSize="3xl"
+                  _groupHover={{ display: "none" }}
+                >
+                  Current Event
+                </Text>
+              </Link>
+            </NextLink>
           </Flex>
         </Flex>
         <Flex
@@ -193,7 +200,7 @@ export default function Main({ characters, weapons }) {
               width="100%"
               height="100%"
               opacity="80%"
-              _groupHover={{ opacity: "0", transition: "500ms"  }}
+              _groupHover={{ opacity: "0", transition: "500ms" }}
             ></Box>
             <Text
               color="white"

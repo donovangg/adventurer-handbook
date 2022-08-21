@@ -26,18 +26,18 @@ export default function Sidebar() {
       display={["none", "none", "none", "flex"]}
     >
       <Flex as="nav" flexDir="column" minH="50%">
-        <Image width="100%" height="auto" src="https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/logo.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvbG9nby53ZWJwIiwiaWF0IjoxNjYwNzA0NTA3LCJleHAiOjE5NzYwNjQ1MDd9.kTbZeOwfgSAVYzQ78khyMBshRUenqygRIvUf151TGuc" />
+        <Image width="50%" height="auto" src="https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/logo.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvbG9nby53ZWJwIiwiaWF0IjoxNjYwNzA0NTA3LCJleHAiOjE5NzYwNjQ1MDd9.kTbZeOwfgSAVYzQ78khyMBshRUenqygRIvUf151TGuc" />
         <Flex flexDir="column" as="ul" mt="6">
           <NextLink href="/">
             <Link fontSize="2xl">Home</Link>
           </NextLink>
-          <NextLink href="/TodoList">
+          <NextLink href="/todolist">
             <Link fontSize="2xl">Todo</Link>
           </NextLink>
-          <NextLink href="/Characters">
+          <NextLink href="/characters">
             <Link fontSize="2xl">Characters</Link>
           </NextLink>
-          <NextLink href="/About">
+          <NextLink href="/about">
             <Link fontSize="2xl">About</Link>
           </NextLink>
         </Flex>

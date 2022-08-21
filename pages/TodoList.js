@@ -10,7 +10,8 @@ import CharacterImage from "../components/CharacterImage";
 
 export default function TodoList({ characters, weapons }) {
   const [todos, setTodos] = useState([
-    { text: "Do my daily commissions", completed: false, id: 1 },
+    { text: "Do my daily commissions", completed: false, id: 101 },
+    { text: "Play the Event", completed: false, id: 102 },
   ]);
   const [inputText, setInputText] = useState("");
   let today = format(new Date(), "EEEE");
