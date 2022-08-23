@@ -10,7 +10,6 @@ Made with: <br>
 The idea of this website was to be able to plan out your Genshin session to see which weapons and characters you can farm for. We don't all have the luxury to grind games multiple hours a day anymore so to be able to burn resin in the most efficient way possible is key.
 
 ## To Do
-  -- Add Todos <br>
-  -- Login for custom todos<br>
+  -- Login to save todos<br>
   -- Characters section<br>
   --Weapons section
