@@ -17,7 +17,13 @@ export default function About() {
         >
           About
         </Text>
-        <Flex flexDir={['column', 'column', 'column', 'row']} justifyContent="center" alignItems="center">
+        <Flex
+          flexDir={["column", "column", "column", "row"]}
+          width="85%"
+          margin="auto"
+          justifyContent="center"
+          alignItems="center"
+        >
           <Flex flexDir="column" flex="1">
             <Text fontSize="3xl" mb="4" color="black">
               Thanks for checking out Adventurer Handbook!
@@ -44,15 +50,20 @@ export default function About() {
               </Link>{" "}
             </Text>
           </Flex>
-          <Flex flex="1" flexDir="column" lignItems="center" justifyContent="center">
+          <Flex
+            flex="1"
+            flexDir="column"
+            alignItems="center"
+            justifyContent="center"
+          >
             <Image
               src="/keqing.png"
               width="50%"
               borderRadius="lg"
               height="auto"
             />
-            <Text color="black">
-              Feel free to reach me on
+            <Text color="black" textDecorationColor="purple.400">
+              Feel free to reach me on{" "}
               <Link href="https://twitter.com/donovanGomezJS" target="_blank">
                 <a>Twitter</a>
               </Link>{" "}

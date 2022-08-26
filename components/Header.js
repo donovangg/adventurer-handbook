@@ -17,7 +17,7 @@ import DrawerNav from "./DrawerNav";
 export default function Header({ colorMode, useColorMode, toggleColorMode }) {
   return (
     <Flex
-      backgroundColor="gray.100"
+      backgroundColor="white"
       as="header"
       minH="5vh"
       borderTop="4px"

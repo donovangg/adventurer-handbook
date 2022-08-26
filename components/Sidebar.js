@@ -19,7 +19,7 @@ export default function Sidebar() {
       borderRight="2px"
       borderColor="purple.400"
       color="black"
-      backgroundColor="gray.100"
+      backgroundColor="white"
       width="15vw"
       minWidth="15vw"
       minHeight="100vh"
