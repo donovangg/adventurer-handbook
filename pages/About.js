@@ -44,10 +44,10 @@ export default function About() {
               session!
             </Text>
             <Text>
-              Any feedback or if you want to contribute you can check out the{" "}
+              Any feedback or if you want to contribute you can check out the
               <Link href="github.com/donovangomez" target="_blank">
                 <a>Github Repo</a>
-              </Link>{" "}
+              </Link>
             </Text>
           </Flex>
           <Flex
@@ -63,10 +63,10 @@ export default function About() {
               height="auto"
             />
             <Text color="black" textDecorationColor="purple.400">
-              Feel free to reach me on{" "}
+              Feel free to reach me on
               <Link href="https://twitter.com/donovanGomezJS" target="_blank">
                 <a>Twitter</a>
-              </Link>{" "}
+              </Link>
               for comments
             </Text>
           </Flex>
