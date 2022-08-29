@@ -11,7 +11,7 @@ export default function Characters({characters}) {
         <Text color="black">charactere page</Text>
         <Flex flexWrap="wrap">
           {characters.map((character) => (
-            <CharacterImage icon={character.icon} />
+            <CharacterImage key={character.id} icon={character.icon} />
           ))}
         </Flex>
       </Flex>

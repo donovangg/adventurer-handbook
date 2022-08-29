@@ -30,17 +30,17 @@ export default function About() {
             </Text>
             <Text fontSize="lg" mb="4" color="black">
               I made this website for the purpose of planning out your Genshin
-              session. If you're like me, you do like the game, but you've
+              session. If you&#39;re like me, you do like the game, but you&#39;ve
               suffered from burnout and the game can feel like a chore. If that
-              isn't the case, you're working a fulltime job which is also like
+              isn&#39;t the case, you&#39;re working a fulltime job which is also like
               me. I would have trouble planning my sessions and wander around
               aimlessly wondering what to do.
             </Text>
             <Text fontSize="lg" mb="4" color="black">
               With this site you can see which characters you can farm for on a
-              certain day so you're not going through the menu over and over.
+              certain day so you&#39;re not going through the menu over and over.
               You can also jot down some other todos while you have the window
-              up. If you're logged in though, you can save it for your next
+              up. If you&#39;re logged in though, you can save it for your next
               session!
             </Text>
             <Text>
@@ -65,9 +65,9 @@ export default function About() {
             <Text color="black" textDecorationColor="purple.400">
               Feel free to reach me on
               <Link href="https://twitter.com/donovanGomezJS" target="_blank">
-                <a>Twitter</a>
+                <a>{" "}Twitter</a>
               </Link>
-              for comments
+              {" "}for comments
             </Text>
           </Flex>
         </Flex>
