@@ -96,8 +96,11 @@ export default function Main({ characters, weapons }) {
             background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/Graven_Innocence.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvR3JhdmVuX0lubm9jZW5jZS53ZWJwIiwiaWF0IjoxNjYyNDQyOTcwLCJleHAiOjE5Nzc4MDI5NzB9.lpvVJjCrWP6n-Er48XkeBgBKhZ-xSEiTfo4C_lBCMzE) right/cover no-repeat"
             role="group"
           >
-            <NextLink href="/characters">
-              <Link>
+            <NextLink
+              href="https://genshin-impact.fandom.com/wiki/Graven_Innocence"
+              target="_blank"
+            >
+              <a>
                 <Box
                   backgroundColor="purple.600"
                   boxShadow="2xl"
@@ -119,7 +122,7 @@ export default function Main({ characters, weapons }) {
                 >
                   Current Event
                 </Text>
-              </Link>
+              </a>
             </NextLink>
           </Flex>
         </Flex>

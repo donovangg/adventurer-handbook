@@ -18,7 +18,7 @@ export default function Header({ colorMode, useColorMode, toggleColorMode}) {
 
   return (
     <Flex
-      backgroundColor="black"
+      backgroundColor="white"
       as="header"
       minH="5vh"
       borderTop="4px"
@@ -29,7 +29,7 @@ export default function Header({ colorMode, useColorMode, toggleColorMode}) {
       <Flex justifyContent="center">
         <Link href="https://github.com/donovangomez/adventurer-handbook" target="_blank">
           <a>
-            <IconButton icon={<FaGithub />} />
+            <IconButton variant="outline" colorScheme="purple"  icon={<FaGithub />} />
           </a>
         </Link>
       </Flex>
