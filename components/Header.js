@@ -14,10 +14,11 @@ import { FaBars, FaGithub, FaMoon, FaSun } from "react-icons/fa";
 import Link from "next/link";
 import DrawerNav from "./DrawerNav";
 
-export default function Header({ colorMode, useColorMode, toggleColorMode }) {
+export default function Header({ colorMode, useColorMode, toggleColorMode}) {
+
   return (
     <Flex
-      backgroundColor="white"
+      backgroundColor="black"
       as="header"
       minH="5vh"
       borderTop="4px"
@@ -26,13 +27,11 @@ export default function Header({ colorMode, useColorMode, toggleColorMode }) {
     >
       <DrawerNav />
       <Flex justifyContent="center">
-        <Link href="https://github.com/donovangomez/portfolio/tree/main/src">
+        <Link href="https://github.com/donovangomez/adventurer-handbook" target="_blank">
           <a>
-            <IconButton icon={<FaGithub />} variant="transparent" />
+            <IconButton icon={<FaGithub />} />
           </a>
         </Link>
-        {/* toggle darkmode button */}
-        {/* <Button onClick={toggleColorMode}>asdsa</Button> */}
       </Flex>
     </Flex>
   );

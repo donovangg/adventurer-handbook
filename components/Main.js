@@ -93,7 +93,7 @@ export default function Main({ characters, weapons }) {
             maxH="300px"
             backgroundColor="white"
             position="relative"
-            background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/summertime-odyssey.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvc3VtbWVydGltZS1vZHlzc2V5LndlYnAiLCJpYXQiOjE2NjAyMDU1NjAsImV4cCI6MTk3NTU2NTU2MH0.vOjT2h2MciX8kpVqAVdknCcHhEpjNqt5YEDggBMZSRg) right/cover no-repeat"
+            background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/Graven_Innocence.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvR3JhdmVuX0lubm9jZW5jZS53ZWJwIiwiaWF0IjoxNjYyNDQyOTcwLCJleHAiOjE5Nzc4MDI5NzB9.lpvVJjCrWP6n-Er48XkeBgBKhZ-xSEiTfo4C_lBCMzE) right/cover no-repeat"
             role="group"
           >
             <NextLink href="/characters">
@@ -189,7 +189,7 @@ export default function Main({ characters, weapons }) {
             rounded="lg"
             backgroundColor="white"
             position="relative"
-            background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/golden-flames.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvZ29sZGVuLWZsYW1lcy53ZWJwIiwiaWF0IjoxNjYwNDI0ODE3LCJleHAiOjE5NzU3ODQ4MTd9.eVBSbyOeA92CG5tcsuoHdTseaHnvBlpBtPZU98VsQ90) right/cover no-repeat"
+            background="url(https://lxckenztuorwyfemtkwg.supabase.co/storage/v1/object/sign/assets/Viridescent_Vigil_2022-08-24.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhc3NldHMvVmlyaWRlc2NlbnRfVmlnaWxfMjAyMi0wOC0yNC53ZWJwIiwiaWF0IjoxNjYyNDQzMDgwLCJleHAiOjE5Nzc4MDMwODB9.ZwzIHnJqPzfSsMBS3pgqJSuw4VnPdYsS-l5_ESOjVro) right/cover no-repeat"
             role="group"
           >
             <Box
