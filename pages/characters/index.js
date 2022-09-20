@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Layout from '../../components/Layout'
+import Layout from "../../components/Layout";
 import { Flex, Text, Image } from "@chakra-ui/react";
-import { supabase } from "../../utils/supabase"
+import { supabase } from "../../utils/supabase";
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -9,8 +9,7 @@ export default function Characters() {
   const fetchCharacters = async () => {
     const res = await fetch("https://api.genshin.dev/characters/all");
     const data = await res.json();
-
-    console.log(data);
+    setCharacters(data);
   };
 
   useEffect(() => {
@@ -20,12 +19,12 @@ export default function Characters() {
   return (
     <Layout>
       <Flex flexDir="column" flex="1" backgroundColor="gray.50">
-        {/* <Text color="black">charactere page</Text>
+        <Text color="black">charactere page</Text>
         <Flex flexWrap="wrap">
           {characters.map((character) => (
-            <CharacterImage key={character.id} icon={character.icon} />
+            <h2>{character.name}</h2>
           ))}
-        </Flex> */}
+        </Flex>
       </Flex>
     </Layout>
   );
