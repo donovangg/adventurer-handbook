@@ -42,23 +42,6 @@ export default function TodoList({ characters, weapons }) {
           />
           <TodoContainer todos={todos} setTodos={setTodos} inputText={inputText} />
         </Flex>
-        <Flex flexWrap="wrap">
-              {characters.map((character) => (
-                <div key={character.id}>
-                  {/* map over array that includes todays date */}
-                  {character.farmable_days.includes(today) ? (
-                    <Flex flexDir="column">
-                      <CharacterImage
-                        icon={character.icon}
-                        name={character.name}
-                      />
-                    </Flex>
-                  ) : (
-                    ""
-                  )}
-                </div>
-              ))}
-            </Flex>
       </Flex>
     </Layout>
   );
