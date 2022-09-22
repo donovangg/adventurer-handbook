@@ -26,7 +26,7 @@ export default function Main({ characters, weapons }) {
   let myDate = new Date(epoch * 1000);
   let current_day = myDate.toGMTString();
   console.log(current_day);
-
+  console.log(characters)
   return (
     <Flex as="main">
       <Sidebar flex="1" />

@@ -14,6 +14,7 @@ export default function TodoForm({ todos, setTodos, inputText, setInputText }) {
 
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
+    console.log(inputText)
   };
     
   const addTodoHandler = (e) => {
