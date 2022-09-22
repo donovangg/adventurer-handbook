@@ -24,19 +24,19 @@ export default function Characters({ characters }) {
         <Flex flexWrap="wrap" gap="2" paddingTop="20" justifyContent="center">
           {characters.map((character) => (
             <Box key={character.id} boxShadow="2xl" rounded="lg">
-              <Link href={`/characters/${character.name.toLowerCase()}`}>
+              {/* <Link href={`/characters/${character.name.toLowerCase()}`}> */}
                 <Box p="4" cursor="pointer">
                   <Tooltip label={character.name}>
-                    <a>
+                    {/* <a> */}
                       <Image
                         src={character.icon}
                         alt={character.name}
                         boxSize="200px"
                       />
-                    </a>
+                    {/* </a> */}
                   </Tooltip>
                 </Box>
-              </Link>
+              {/* </Link> */}
             </Box>
           ))}
         </Flex>
