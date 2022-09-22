@@ -1,35 +1,41 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
-import { Flex, Text, Image } from "@chakra-ui/react";
+import { Flex, Text, Image, Tooltip, Box } from "@chakra-ui/react";
 import { supabase } from "../../utils/supabase";
 import Link from "next/link";
 
-export default function Characters({characters}) {
- console.log(characters)
-
-//   const fetchCharacters = async () => {
-//     const res = await fetch("https://api.genshin.dev/characters/all");
-//     const data = await res.json();
-//     setCharacters(data);
-//   };
-
-//   useEffect(() => {
-//     fetchCharacters();
-//   }, []);
+export default function Characters({ characters }) {
+  console.log(characters);
 
   return (
     <Layout>
       <Flex flexDir="column" flex="1" color="black" backgroundColor="gray.50">
-        <Text color="black">charactere page</Text>
-        <Flex flexWrap="wrap">
+        <Text
+          bgGradient="linear(to-l, #6B46C1, #CF3DA9)"
+          bgClip="text"
+          fontSize="6xl"
+          fontWeight="extrabold"
+          paddingTop="5"
+          paddingBottom="5"
+          textAlign="center"
+        >Characters</Text>
+        <Flex flexWrap="wrap" gap="2" paddingTop="20" justifyContent="center">
           {characters.map((character) => (
             <div>
-            <Link href={`/characters/${character.name.toLowerCase()}`}>
-            <a>
-              <h2>{character.name}</h2>
-              <Image src={character.icon} alt={character.name} />
-              </a>
-            </Link>
+              <Link href={`/characters/${character.name.toLowerCase()}`}>
+                <Box p="4" cursor="pointer">
+                <Tooltip label={character.name}>
+                <a>
+                  <Image
+                    src={character.icon}
+                    alt={character.name}
+                    boxSize="200px"
+                    border="2px"
+                  />
+                </a>
+                </Tooltip>
+                </Box>
+              </Link>
             </div>
           ))}
         </Flex>
